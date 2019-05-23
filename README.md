@@ -2,7 +2,8 @@
 Galaxy wrapper for sickle paired-end trimming, input is a zip file
 ## Getting Started
 ### Installing
-Installing the tool for use in Galaxy
+Installing the tool for use in Galaxy  
+(user: **galaxy**)
 ```
 cd /home/galaxy/Tools
 ```
