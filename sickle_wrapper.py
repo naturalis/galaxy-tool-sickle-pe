@@ -42,9 +42,15 @@ def admin_log(tempdir, out=None, error=None, function=""):
     with open(tempdir + "/log.log", 'a') as adminlogfile:
         seperation = 60 * "="
         if out:
-            adminlogfile.write("out "+ function + " \n" + seperation + "\n" + out + "\n\n")
+            if type(out)==str:
+                adminlogfile.write("out "+ str(function) + " \n" + str(seperation) + "\n" + str(out) + "\n\n")
+            else:
+                adminlogfile.write("out "+ str(function) + " \n" + str(seperation) + "\n" + out.decode() + "\n\n")
         if error:
-            adminlogfile.write("error " + function + "\n" + seperation + "\n" + error + "\n\n")
+            if type(error)==str:
+                adminlogfile.write("error " + str(function) + "\n" + str(seperation) + "\n" + str(error) + "\n\n")
+            else:
+                adminlogfile.write("error " + str(function) + "\n" + str(seperation) + "\n" + error.decode() + "\n\n")
 
 def make_output_folders(tempdir):
     """
@@ -93,8 +99,8 @@ def gunzip(tempdir):
     for x in gzfiles:
         call(["gunzip", tempdir + "/paired_files/" + x])
         gunzip_filename = os.path.splitext(x[:-3])
-        if x[:-3] != gunzip_filename[0].translate((string.maketrans("-. ", "___"))) + gunzip_filename[1]:
-            call(["mv", tempdir + "/paired_files/" + x[:-3], tempdir + "/paired_files/" +gunzip_filename[0].translate((string.maketrans("-. " , "___")))+gunzip_filename[1]])
+        if x[:-3] != gunzip_filename[0].translate((str.maketrans("-. ", "___"))) + gunzip_filename[1]:
+            call(["mv", tempdir + "/paired_files/" + x[:-3], tempdir + "/paired_files/" +gunzip_filename[0].translate((str.maketrans("-. " , "___")))+gunzip_filename[1]])
 
 def sickle(pairs, tempdir):
     """
