@@ -1,9 +1,5 @@
-#!/usr/bin/python
-"""
-Sickle   V1.0    martenhoogeveen@naturalis.nl
+#!/usr/bin/env python
 
-This is a wrapper for the tool sickle
-"""
 import sys, os, argparse
 import glob
 import string
