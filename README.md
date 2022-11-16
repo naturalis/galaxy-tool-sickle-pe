@@ -12,7 +12,7 @@ Make the python script executable:
 `chmod 755 galaxy-tool-sickle-pe/sickle_wrapper.py` 
 
 Append the file ***tool_conf.xml***:    
-`<tool file="/path/to/Tools/galaxy-tool-sickle-pe/sickle.sh" />`  
+`<tool file="/path/to/Tools/galaxy-tool-sickle-pe/sickle.xml" />`  
 
 ### Ansible
 Depending on your setup the [ansible.builtin.git](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/git_module.html) module could be used.  
