@@ -1,0 +1,13 @@
+name: naturalis_sickle_pe
+owner:  luka
+description: "Galaxy wrapper for sickle paired-end trimming, input is a zip file" 
+long_description: |
+  "Galaxy wrapper for sickle paired-end trimming, input is a zip file".
+remote_repository_url: https://github.com/naturalis/galaxy-tool-sickle-pe.git
+homepage_url: https://github.com/naturalis/galaxy-tool-sickle-pe.git
+type: unrestricted
+categories:
+   - "Sequence Analysis"
+auto_tool_repositories:
+  name_template: naturalis_sickle_pe
+  description_template: naturalis_sickle_pe
