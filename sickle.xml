@@ -1,4 +1,4 @@
-<tool id="sickle trimmer" name="Quality trim paired-end reads with Sickle">
+<tool id="sickle trimmer" name="Quality trim paired-end reads with Sickle" version="1.0">
 <!--<description>quality trim reads</description>-->
 <requirements>
 		<requirement type="package" version="3.8.2">python</requirement>
